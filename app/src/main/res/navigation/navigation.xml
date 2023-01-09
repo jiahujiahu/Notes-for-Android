@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@+id/navigation"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            app:startDestination="@id/mainFragment">
+<fragment android:id="@+id/mainFragment"
+          android:name="ui.assignments.a4notes.ui.MainFragment"
+          android:label="main_fragment"
+          tools:layout="@layout/main_fragment">
+    <action android:id="@+id/action_mainFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+    <action android:id="@+id/action_mainFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+</fragment>
+<fragment android:id="@+id/addFragment"
+          android:name="ui.assignments.a4notes.ui.AddFragment"
+          android:label="add_fragment"
+          tools:layout="@layout/add_fragment">
+    <action android:id="@+id/action_addFragment_to_mainFragment"
+            app:destination="@id/mainFragment"/>
+    <action android:id="@+id/action_addFragment_pop"
+            app:popUpTo="@id/addFragment"
+            app:popUpToInclusive="true"/>
+</fragment>
+<fragment android:id="@+id/editFragment"
+          android:name="ui.assignments.a4notes.ui.EditFragment"
+          android:label="edit_fragment"
+          tools:layout="@layout/edit_fragment">
+    <action android:id="@+id/action_editFragment_to_mainFragment"
+            app:destination="@id/mainFragment"/>
+    <action android:id="@+id/action_editFragment_pop"
+            app:popUpTo="@id/editFragment"
+            app:popUpToInclusive="true"/>
+</fragment>
+</navigation>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:gravity="center_horizontal" >
+
+        <Switch android:id="@+id/importantSwitchE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/important"
+                android:layout_margin="12dp"
+                tools:ignore="UseSwitchCompatOrMaterialXml"/>
+
+        <Switch android:id="@+id/archivedSwitchE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/archived"
+                android:layout_margin="12dp"
+                tools:ignore="UseSwitchCompatOrMaterialXml"/>
+
+    </LinearLayout>
+
+    <EditText android:id="@+id/titleE"
+              android:inputType="text"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint = "@string/title"/>
+
+    <EditText android:id="@+id/ContentE"
+              android:inputType="text"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:hint="@string/content"
+              android:gravity="top|left"/>
+
+</LinearLayout>
